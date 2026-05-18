@@ -36,19 +36,17 @@ def generate_launch_description():
         {'range_min': 0.05},
         {'range_max': 20.0},
         {'clockwise': False},
-        {'motor_speed': 10}
+        {'motor_speed': 15}
       ]
   )
 
   # base_link to laser_frame tf node
-  """
   base_link_to_laser_tf_node = Node(
     package='tf2_ros',
     executable='static_transform_publisher',
     name='base_link_to_base_laser',
     arguments=['0.07','0','0.13','0','0','0','base_link','lidar']
   )
-  """
 
 
   # Define LaunchDescription variable
